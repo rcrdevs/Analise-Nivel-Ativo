@@ -18,7 +18,7 @@ def kms_to_meters(kms):
         return 0
 
 #API Key import and inicialization        
-API_KEY = 'AIzaSyDYDmvj32u6j6RF4sPv0WCBWMf5XH7iJHI'
+API_KEY = ""
 map_client = googlemaps.Client(API_KEY)
 
 
