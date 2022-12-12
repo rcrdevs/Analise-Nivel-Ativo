@@ -1,0 +1,22 @@
+stringsp = (str(geo2[0]).split(','))
+
+rua = (str(stringsp[0]))
+região = (stringsp[1])
+bairro = (stringsp[2])
+Uf = (str(stringsp[3]).split(' '))
+#Uf1 = list(Uf[1])
+#Uf2 = list(Uf[2])
+#Uff = Uf1[0] + Uf2[0]
+Pais = stringsp[8]
+cidade = stringsp[3]
+zoneamento = stringsp[5]
+tipologia = stringsp[6]
+cep = stringsp[9]
+dfgeo = pd.DataFrame(geocode)
+link = 'https://www.google.com/maps/place/?q=place_id:' + dfgeo['place_id']
+link = link[0]
+infos = stringsp[8]
+
+#Dataframe do endereço de referencia
+df4 = pd.DataFrame(columns= ['Rua', 'Região', 'Bairro', 'UF', 'Pais', 'Cidade', 'Zoneamento', 'Tipologia', 'CEP', 'Latitude', 'Longitude', 'Link Maps', 'Mais Informações'])
+df4 = df4.append({'Rua': rua, 'Região': região, 'Bairro':bairro, 'UF':Uf, 'Pais': Pais, 'Cidade':cidade, 'Zoneamento':zoneamento, 'Tipologia':tipologia, 'CEP':cep, 'Latitude':lat, 'Longitude':lng, 'Link Maps':link, 'Mais Informações':infos }, ignore_index=True)
