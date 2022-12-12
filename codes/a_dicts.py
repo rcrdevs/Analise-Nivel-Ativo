@@ -20,4 +20,4 @@ escopes = (
 'SESC',
 'Prefeitura')
 
-API_KEY = 'AIzaSyDYDmvj32u6j6RF4sPv0WCBWMf5XH7iJHI'
+API_KEY = '*****'
